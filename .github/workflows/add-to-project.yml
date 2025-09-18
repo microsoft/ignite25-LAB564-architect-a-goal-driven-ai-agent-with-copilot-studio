@@ -1,0 +1,71 @@
+name: Add issues to project
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  add-to-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add to project
+        uses: actions/add-to-project@v0.6.0
+        with:
+          # You can target a repository in a different organization
+          # to the issue
+          project-url: https://github.com/orgs/microsoft/projects/PROJECT_NUMBER
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+
+  label_issues:
+    name: Label new issues
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - name: Label as new issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['triage', 'new-issue']
+            })
+      
+      - name: Auto-label based on title
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const title = issue.title.toLowerCase();
+            const labels = [];
+            
+            // Add labels based on keywords in the title
+            if (title.includes('bug') || title.includes('error') || title.includes('fix')) {
+              labels.push('bug');
+            }
+            if (title.includes('feature') || title.includes('enhancement') || title.includes('add')) {
+              labels.push('enhancement');
+            }
+            if (title.includes('doc') || title.includes('readme') || title.includes('guide')) {
+              labels.push('documentation');
+            }
+            if (title.includes('question') || title.includes('help') || title.includes('how')) {
+              labels.push('question');
+            }
+            if (title.includes('copilot') || title.includes('agent') || title.includes('ai')) {
+              labels.push('copilot-studio');
+            }
+            
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: labels
+              });
+            }
