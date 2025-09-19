@@ -19,15 +19,15 @@
 
 
 # Project information .........................................
-site_name: "Session Title"
+site_name: "LAB564: Architect a Goal-Driven AI Agent with Copilot Studio"
 site_url: 
-site_author: Content Creator
+site_author: Paolo Pialorsi
 site_description: >-
   Demo mkdocs for Ignite Repos
 
 # Repository ..................................................
-repo_name: microsoft/Ignite25-Repo-Template
-repo_url: https://github.com/microsoft/Ignite25-Repo-Template
+repo_name: microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio
+repo_url: https://github.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio
 
 # Copyright ...................................................
 copyright: >
