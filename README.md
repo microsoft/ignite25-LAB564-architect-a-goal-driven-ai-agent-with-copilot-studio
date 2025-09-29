@@ -62,6 +62,11 @@ For more information, setup instructions for other dev clients, and to post comm
                 <sub><b> Paolo Pialorsi</b></sub></a><br />
                 <a href="https://github.com/PaoloPia" title="talk">📢</a> 
         </td>
+        <td align="center"><a href="http://github.com/aycabas">
+                <img src="https://github.com/aycabas.png" width="100px;" alt="Ayca Bas"/><br />
+                <sub><b> Ayca Bas</b></sub></a><br />
+                <a href="https://github.com/aycabas" title="talk">📢</a> 
+        </td>
 </tr>
 </table>
 
