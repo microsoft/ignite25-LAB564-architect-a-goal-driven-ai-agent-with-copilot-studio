@@ -103,18 +103,19 @@ Choose to **Configure** and define your new agent with the following settings:
 - **Name**: 
 
 ```
-Copilot Extensibility Advisor
++++Copilot Extensibility Advisor+++
 ```
 
 - **Description**: 
 
 ```
-An intelligent advisor that helps users choose the best approach for extending Microsoft Copilot based on their needs and technical background
++++An intelligent advisor that helps users choose the best approach for extending Microsoft Copilot based on their needs and technical background+++
 ```
 
 - **Instructions**: 
 
 ```
++++
 You are an expert advisor specializing in Microsoft Copilot extensibility options. You help users understand and choose between different approaches for extending Microsoft Copilot based on their technical background, project requirements, and preferences.
 
 You can guide users through:
@@ -124,6 +125,7 @@ You can guide users through:
 - Getting started with their chosen development path
 
 Always provide clear, helpful guidance and ask clarifying questions when needed to ensure users get the most appropriate recommendations for their specific use case.
++++
 ```
 
 ![The agent creation dialog in Copilot Studio with the name, description, and instructions filled in for the "Copilot Extensibility Advisor" agent.](../../img/create-agent-01.png)
@@ -134,10 +136,10 @@ Select **Create** to create your new agent.
 
 After creating the agent, you'll be taken to the agent configuration page. Wait for the **Publish** command in the upper right corner to become enabled. Then, scroll down and in the **Suggested prompts** section, add these helpful prompts:
 
-1. Title: `Get development guidance` - Prompt: `I want to build an agent, what are my options?`
-2. Title: `No-code approach` - Prompt: `I want to create agents without programming`
-3. Title: `Developer approach` - Prompt: `I'm a developer looking for programmatic agent development`
-4. Title: `Compare approaches` - Prompt: `What's the difference between no-code and pro-code agent development?`
+1. Title: `+++Get development guidance+++` - Prompt: `+++I want to build an agent, what are my options?+++`
+2. Title: `+++No-code approach+++` - Prompt: `+++I want to create agents without programming+++`
+3. Title: `+++Developer approach+++` - Prompt: `+++I'm a developer looking for programmatic agent development+++`
+4. Title: `+++Compare approaches+++` - Prompt: `+++What's the difference between no-code and pro-code agent development?+++`
 
 ![The agent configuration page showing the "Suggested prompts" section filled in with the suggested information for the Copilot Extensibility Advisor.](../../img/create-agent-02.png)
 
@@ -175,11 +177,13 @@ First, create the main topic that will use AI Builder for intelligent routing:
 
 1. In your "Copilot Extensibility Advisor" agent, select the **Topics** tab
 2. Select **+ Add a topic** and choose **From blank**
-3. Rename it as 1️⃣ `Intent Analysis`
+3. Rename it as 1️⃣ `+++Intent Analysis+++`
 4. Fill the field 2️⃣ **Describe what the topic does** with the following text:
 
 ```
++++
 Analyses user messages to determine development approach preference and routes to appropriate topics. Trigger phrases can be: "I want to build an agent", "How do I create agents", "I need help with agent development", "Can you help me develop a chatbot", "I'm looking for agent building tools", "What are my options for creating agents".
++++
 ```
 
 ![The topic creation interface showing the trigger phrase configuration for the Intent Analysis topic with various natural language expressions that will activate the routing logic.](../../img/topic-creation-01.png)
@@ -211,6 +215,7 @@ Let's use the default GPT-4.1-mini, which is enough for the prompt you are going
 In the 4️⃣ textarea just below the model selection, you can write the instructions for your new prompt. For example, use the following text:
 
 ```
++++
 You are an expert assistant that analyses user messages to determine their preferred approach for building AI agents. 
 
 Analyze the user's message and determine if they are interested in:
@@ -218,7 +223,7 @@ Analyze the user's message and determine if they are interested in:
 2. "pro-code" - Programmatic development using code, SDKs, or development tools
 
 Consider these indicators:
-- No-code/low-code: mentions of "visual", "drag and drop", "no coding", "point and click", "GUI", "interface"
+- No-code/low-code: mentions of "visual", "drag and drop", "no coding", "point and click", "GUI", "interface", "Copilot Studio", "Agent Builder", "maker", "no-code", "low-code"
 - Pro-code: mentions of "code", "programming", "SDK", "API", "development", "Visual Studio Code", "Agents Toolkit"
 
 If the message is ambiguous or doesn't clearly indicate a preference, return "unclear".
@@ -231,6 +236,7 @@ or
 {"approach": "unclear"}
 
 Do not include any additional text or explanation outside the JSON response.
++++
 ```
 
 Select the words `user's message` at the top of the instrucctions and select 5️⃣ **+ Add content** just below the instructions text.
@@ -260,23 +266,23 @@ Select the **Inputs** variable of the Prompt Builder action and select the 1️�
 
 ![The configuration of the topic while browsing for a System variable and when selecting "Activity.Text".](../../img/topic-creation-02.png)
 
-Then, configure a new variable to hold the output of the Prompt Builder action. For example, you can name it `intentPrediction`.
+Then, configure a new variable to hold the output of the Prompt Builder action. For example, you can name it `+++intentPrediction+++`.
 
 ### Step 3: Prepare the child topics
 
-Go back to the list of **Topics** and create a new topic from blank. Name it 1️⃣ **No-Code/Low-Code Agents**, select the 2️⃣ icon with two arrows to configure the trigger condition, and configure the trigger as 3️⃣ **It's redirected to**.
+Go back to the list of **Topics** and create a new topic from blank. Name it 1️⃣ `+++No-Code/Low-Code Agents+++`, select the 2️⃣ icon with two arrows to configure the trigger condition, and configure the trigger as 3️⃣ **It's redirected to**.
 
 ![The configuration of the "No-Code/Low-Code Agents" topic so that it will be triggered by a redirection.](../../img/topic-creation-03.png)
 
 The above setting will configure the topic so that users can only reach it through another topic that redirects to it and not directly because of a specific user's prompt.
 
-Now add an action of type **Send a message** and configure the message with value: `Cool! You want to create a no-code/low-code agent!`.
+Now add an action of type **Send a message** and configure the message with value: `+++Cool! You want to create a no-code/low-code agent!+++`.
 
 In the following screenshot you can see how the **No-Code/Low-Code Agents** topic looks like.
 
 ![The "No-Code/Low-Code Agents" topic configured to handle redirection and to send a generic message.](../../img/topic-creation-04.png)
 
-Now, follow the same steps and create yet another topic from blank with name **Pro-Code Agents**. Configure its trigger condition as like as the previous topic. In the **Send a message** action send the following message: `Perfect! You want to create a pro-code agent!`
+Now, follow the same steps and create yet another topic from blank with name `+++Pro-Code Agents+++`. Configure its trigger condition as like as the previous topic. In the **Send a message** action send the following message: `+++Perfect! You want to create a pro-code agent!+++`
 
 In the Part 2 of this lab you will come back to this topics and you will improve them with the **Generative Answers** action.
 
@@ -288,14 +294,14 @@ At the end of the topic, right after the **Prompt Builder**, Insert a new action
 
 ![The action "Set a variable value" highlighted in the topic designer, under the group "Variable management".](../../img/conversation-flow-01.png)
 
-Select the 1️⃣ **Set variable** field, then select to 2️⃣ **Create a new variable**, and name it 3️⃣ `approach`.
+Select the 1️⃣ **Set variable** field, then select to 2️⃣ **Create a new variable**, and name it 3️⃣ `+++approach+++`.
 
 ![The user interface to configure the variable for the "Set variable" action, with the creation of a new variable with name "approach".](../../img/conversation-flow-02.png)
 
 Now, select the **To value** field of the action and set its value to the following PowerFx formula:
 
 ```
-Topic.intentPrediction.structuredOutput.approach
++++Topic.intentPrediction.structuredOutput.approach+++
 ```
 
 The above syntax instructs Copilot Studio to assign to the variable the actual value of the approach property in the JSON response that comes back from the Prompt Builder action.
