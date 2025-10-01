@@ -48,7 +48,7 @@ Navigate to SharePoint Online:
 1. Browse the **generic** library to inspect its content
 1. Copy the URL of the library in the format `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/generic/`
 
-![The SharePoint site with the knowledge base for the agent. There are three libraries highlighted: "no-and-low-code", "pro-code", and "generic".](../../img/spo-content-01.png)
+![The SharePoint site with the knowledge base for the agent. There are three libraries highlighted: "no-and-low-code", "pro-code", and "generic".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/spo-content-01.png)
 
 The documents are created from the content of the Microsoft Learn site and will become the knowledge base of your agent through the Generative Answers action.
 
@@ -61,11 +61,11 @@ Navigate to the **Knowledge** section and add SharePoint as a knowledge source:
 1. Select **+ Add knowledge**
 1. In the **Featured** section, select **SharePoint**
 
-![The Copilot Studio dialog to add a new knowledge base. The SharePoint knowledge source is highlighted.](../../img/add-sharepoint-knowledge-01.png)
+![The Copilot Studio dialog to add a new knowledge base. The SharePoint knowledge source is highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-01.png)
 
 1. Enter the SharePoint URL of the first document library `+++https://lodsprodmca.sharepoint.com/sites/LAB564-Content/noandlowcode/+++` and select **Add**
 
-![The Copilot Studio dialog to add a new knowledge base with the URL of library filled in and the "Add" command highlighted.](../../img/add-sharepoint-knowledge-02.png)
+![The Copilot Studio dialog to add a new knowledge base with the URL of library filled in and the "Add" command highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-02.png)
 
 1. Configure the new knowledge base with the following settings:
 
@@ -84,13 +84,13 @@ Navigate to the **Knowledge** section and add SharePoint as a knowledge source:
     - **Name**: `+++Generic content+++`
     - **Description**: `+++Comprehensive collection of generic documents about Microsoft 365 Copilot extensibility.+++`
 
-![The SharePoint knowledge sources configuration dialog showing the URLs, names, and descriptions fields for all the three knowledge sources.](../../img/add-sharepoint-knowledge-03.png)
+![The SharePoint knowledge sources configuration dialog showing the URLs, names, and descriptions fields for all the three knowledge sources.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-03.png)
 
 1. Select the **Add to agent** command to add the three knowledge sources to the agent
 
 Wait for the status to change to **Ready** before proceeding to the next exercise.
 
-![The knowledge sources of the agent with the three SharePoint sources marked as "ready".](../../img/add-sharepoint-knowledge-04.png)
+![The knowledge sources of the agent with the three SharePoint sources marked as "ready".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-04.png)
 
 Now your agent has specific knowledge bases about creating agents with both no-code/low-code and pro-code techniques, as well as some generic knownledge about extending Microsoft 365 Copilot.
 
@@ -107,7 +107,7 @@ Navigate to the **Topics** section in your agent. You should see two topics that
 
 If these topics don't exist, you'll need to create them first following the patterns described in Part 1 of this lab.
 
-![The Topics section highlighting the existing No-Code Low-Code Agents and Pro-Code Agents topics.](../../img/topics-01.png)
+![The Topics section highlighting the existing No-Code Low-Code Agents and Pro-Code Agents topics.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/topics-01.png)
 
 ### Step 2: Adding Generative Answers to the No-Code/Low-Code Topic
 
@@ -116,11 +116,11 @@ Open the **No-Code/Low-Code Agents** topic for editing:
 1. Select the **+** to insert a new action right after the **Send a message** action that you configured in the previous part of this lab
 1. Select **Advanced** -> **Generative Answers**
 
-![The user experience to add a "Generative Answers" action to an existing topic.](../../img/generative-answers-01.png)
+![The user experience to add a "Generative Answers" action to an existing topic.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-01.png)
 
 1. Configure the 1️⃣ **Input** of the action with the 2️⃣ system variable 3️⃣ `Activity.Text`
 
-![The user experience to configure the input of the "Generative Answers" action to use the "Activity.Text".](../../img/generative-answers-02.png)
+![The user experience to configure the input of the "Generative Answers" action to use the "Activity.Text".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-02.png)
 
 Now you can fine tune the settings of the **Generative Answers** action. Select the **Edit** button and configure the following properties:
 
@@ -146,7 +146,7 @@ Now you can fine tune the settings of the **Generative Answers** action. Select 
     - Set **Save LLM response** to **Complete (recommended)**
     - **Save bot response as**: Create a new variable called `+++noCodeResponse+++`
 
-![The configured settings for the "Generative Answers" action, including a custom seleciton of knowledge sources, medium moderation, and advanced handling of the LLM response stored into a variable with name "noCodeRespose".](../../img/generative-answers-03.png)
+![The configured settings for the "Generative Answers" action, including a custom seleciton of knowledge sources, medium moderation, and advanced handling of the LLM response stored into a variable with name "noCodeRespose".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-03.png)
 
 The Generative Answers action is now configured to use only the `No-code/Low-code content` source, to not rely on web or LLM general knowledge, and to store the complete LLM response into a topic variable with name `noCodeResponse`.
 
@@ -163,7 +163,7 @@ Now enhance the second topic. Open the **Pro-Code Agents** topic for editing and
 
 **Save** both topics and **Publish** your agent. Enable the 1️⃣ **Test** panel, toggle the 2️⃣ **Activity Map** to `On`, and enable the option to 3️⃣ **Track between topics**.
 
-![The user experience of Copilot Studio to enable the test interface, the activity map, and the tracking between topics.](../../img/testing-02.png)
+![The user experience of Copilot Studio to enable the test interface, the activity map, and the tracking between topics.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/testing-02.png)
 
 Then test both topics to ensure they work correctly using the following prompts:
 
@@ -203,7 +203,7 @@ Open the **No-Code/Low-Code Agents** topic for editing:
 1. Locate the **Generative Answers** node 
 1. Edit its properties and in the **Advanced** section disable the option **Send a message**
 
-![The option to "Send a message" disabled in the "Advanced" properties of the "Generative Answers" action.](../../img/generative-answers-04.png)
+![The option to "Send a message" disabled in the "Advanced" properties of the "Generative Answers" action.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-04.png)
 
 We'll replace the default and simple message with a more sophisticated adaptive card presentation accordingly to the following steps:
 
@@ -211,7 +211,7 @@ We'll replace the default and simple message with a more sophisticated adaptive 
 1. Select **+ Add node** > **Send a message**
 1. Instead of using a simple text message, select **+ Add** > **Adaptive Card**
 
-![The user experience to add an Adaptive Card as the output of a "Send a message" action.](../../img/send-message-01.png)
+![The user experience to add an Adaptive Card as the output of a "Send a message" action.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/send-message-01.png)
 
 In the property pane on the right side, select **Edit adaptive card** to open the integrated Adaptive Card designer.
 Configure the adaptive card definition with the following JSON template that includes both response and additional references:
@@ -283,18 +283,18 @@ Configure the adaptive card definition with the following JSON template that inc
 
 Select **Save** in the upper right corner of the Adaptive Card designer and **Close** the designer.
 
-![The adaptive card designer for no-code/low-code guidance showing structured presentation with response content, source references, and action buttons.](../../img/nocode-adaptive-card-01.png)
+![The adaptive card designer for no-code/low-code guidance showing structured presentation with response content, source references, and action buttons.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/nocode-adaptive-card-01.png)
 
 Now in the **Adaptive Card properties** pane select **JSON card** and switch to **Formula**.
 
-![The control to switch from "JSON card" to "Formula" in the properties of the Adaptive Card.](../../img/nocode-adaptive-card-02.png)
+![The control to switch from "JSON card" to "Formula" in the properties of the Adaptive Card.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/nocode-adaptive-card-02.png)
 
 A new simplified editor shows up. Expand the editor selecting the expand arrows in the upper right corner and update the JSON content in order to replace the following text with the corresponding PowerFx formulas:
 
 - **"Topic: ${noCodeTopic}"**: `+++Concatenate("Topic: ", System.Activity.Text)+++`
 - **"${noCodeResponse}"**: `+++Topic.noCodeResponse.Text.MarkdownContent+++`
 
-![The JSON of the Adaptive Card updated with a couple of PowerFx formulas.](../../img/nocode-adaptive-card-03.png)
+![The JSON of the Adaptive Card updated with a couple of PowerFx formulas.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/nocode-adaptive-card-03.png)
 
 Close the JSON editor, **Save** the topic, and **Publish** the agent. 
 
@@ -317,6 +317,6 @@ Expected result:
   - Source reference section
   - Action buttons for follow-up and knowledge base access
 
-![The test panel showing the Adaptive Card rendered by the "No-Code/Low-Code Agents" topic.](../../img/enhanced-testing-01.png)
+![The test panel showing the Adaptive Card rendered by the "No-Code/Low-Code Agents" topic.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/enhanced-testing-01.png)
 
 Feel free to enhance als the **Pro-Code Agents** topic to use an Adaptive Card for rendering, if you like and if time permits.
