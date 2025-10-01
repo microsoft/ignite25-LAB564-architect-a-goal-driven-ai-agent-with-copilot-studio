@@ -88,7 +88,7 @@ Navigate to +++https://copilotstudio.microsoft.com+++ and login with your Micros
 
 **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
-**Password: +++@lab.CloudPortalCredential(User1).Password+++**
+**Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
 
 If this is the very first time you run Copilot Studio and if you don't have a license, you will see the following screen through which you will be able to start a trial period.
 
@@ -103,29 +103,27 @@ Choose to **Configure** and define your new agent with the following settings:
 - **Name**: 
 
 ```
-+++Copilot Extensibility Advisor+++
+Copilot Extensibility Advisor
 ```
 
 - **Description**: 
 
 ```
-+++An intelligent advisor that helps users choose the best approach for extending Microsoft Copilot based on their needs and technical background+++
+An intelligent advisor that helps users choose the best approach for extending Microsoft Copilot based on their needs and technical background
 ```
 
 - **Instructions**: 
 
 ```
-+++
 You are an expert advisor specializing in Microsoft Copilot extensibility options. You help users understand and choose between different approaches for extending Microsoft Copilot based on their technical background, project requirements, and preferences.
 
 You can guide users through:
-- No-code/low-code solutions using Microsoft Copilot Studio's visual interface
+- No-code/low-code solutions using Microsoft Copilot Studio visual interface
 - Pro-code development using Visual Studio Code and the Agents Toolkit
 - Understanding the benefits and limitations of each approach
 - Getting started with their chosen development path
 
 Always provide clear, helpful guidance and ask clarifying questions when needed to ensure users get the most appropriate recommendations for their specific use case.
-+++
 ```
 
 ![The agent creation dialog in Copilot Studio with the name, description, and instructions filled in for the "Copilot Extensibility Advisor" agent.](../../img/create-agent-01.png)
@@ -181,9 +179,7 @@ First, create the main topic that will use AI Builder for intelligent routing:
 4. Fill the field 2️⃣ **Describe what the topic does** with the following text:
 
 ```
-+++
 Analyses user messages to determine development approach preference and routes to appropriate topics. Trigger phrases can be: "I want to build an agent", "How do I create agents", "I need help with agent development", "Can you help me develop a chatbot", "I'm looking for agent building tools", "What are my options for creating agents".
-+++
 ```
 
 ![The topic creation interface showing the trigger phrase configuration for the Intent Analysis topic with various natural language expressions that will activate the routing logic.](../../img/topic-creation-01.png)
@@ -215,7 +211,6 @@ Let's use the default GPT-4.1-mini, which is enough for the prompt you are going
 In the 4️⃣ textarea just below the model selection, you can write the instructions for your new prompt. For example, use the following text:
 
 ```
-+++
 You are an expert assistant that analyses user messages to determine their preferred approach for building AI agents. 
 
 Analyze the user's message and determine if they are interested in:
@@ -236,7 +231,6 @@ or
 {"approach": "unclear"}
 
 Do not include any additional text or explanation outside the JSON response.
-+++
 ```
 
 Select the words `user's message` at the top of the instrucctions and select 5️⃣ **+ Add content** just below the instructions text.
@@ -301,7 +295,7 @@ Select the 1️⃣ **Set variable** field, then select to 2️⃣ **Create a new
 Now, select the **To value** field of the action and set its value to the following PowerFx formula:
 
 ```
-+++Topic.intentPrediction.structuredOutput.approach+++
+Topic.intentPrediction.structuredOutput.approach
 ```
 
 The above syntax instructs Copilot Studio to assign to the variable the actual value of the approach property in the JSON response that comes back from the Prompt Builder action.
@@ -357,14 +351,14 @@ Test the routing to the "No-Code/Low-Code Agents" topic with these sample prompt
 **Test Case 1: Clear No-Code Intent**
 
 ```
-+++I want to create an agent but I'm not a developer+++
+I want to create an agent but I'm not a developer
 ```
 
 **Expected Result:** The agent should analyze the message, determine it's a no-code/low-code request, and route to the "No-Code/Low-Code Agents" topic, displaying the message "Cool! You want to create a no-code/low-code agent!"
 
 **Test Case 2: Developer-focused Request**
 ```
-+++Is there any SDK for building conversational agents?+++
+Is there any SDK for building conversational agents?
 ```
 
 **Expected Result:** The agent should identify this as a pro-code request and route to the "Pro-Code Agents" topic, displaying "Perfect! You want to create a pro-code agent!"

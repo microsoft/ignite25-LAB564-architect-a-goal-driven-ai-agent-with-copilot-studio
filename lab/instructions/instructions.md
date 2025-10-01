@@ -6,17 +6,9 @@ Login to your VM with the following credentials...
 
 **Password: +++@lab.VirtualMachine(Win11-Pro-Base).Password+++** 
 
-Use this account to log into Microsoft 365 and/or Microsoft Azure Portal:
-
-**Username: +++@lab.CloudPortalCredential(User1).Username+++**
-
-**Password: +++@lab.CloudPortalCredential(User1).Password+++**
-
 <br>
 
 ---
-
-# LAB564 - Architect a Goal-Driven AI Agent with Copilot Studio
 
 ## Welcome to Your Learning Journey! 🎯
 
@@ -32,7 +24,7 @@ Get ready to dive deep into the world of intelligent agents and discover how the
 
 ===
 
-!INSTRUCTIONS [Writing advanced topics with AI Builder](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/lab/instructions/lab-topics-ai-builder.md?token=GHSAT0AAAAAADKELEAEXHDHGEAMAQSAWHQM2G3YFLQ)
+!INSTRUCTIONS [Writing advanced topics with AI Builder](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/lab/instructions/lab-topics-ai-builder.md?token=GHSAT0AAAAAADKELEAESJGKDHTG54O47ET42G5J3BQ)
 
 Congratulations! You have successfully built an intelligent topic routing system that leverages AI Builder for sophisticated conversation management in Microsoft Copilot Studio. 
 
@@ -40,7 +32,7 @@ You can now move to Part 2 and have fun using the Generative Answers action in C
 
 ===
 
-!INSTRUCTIONS [Using Generative Answers in Microsoft Copilot Studio]()
+!INSTRUCTIONS [Using Generative Answers in Microsoft Copilot Studio](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/lab/instructions/lab-generative-answers.md?token=GHSAT0AAAAAADKELEAF6UOSMXRCDXY7X5IM2G5J3KQ)
 
 Congratulations! You have completed the lab module and you learned how to integrate Generative Answers action in Microsoft Copilot Studio!
 

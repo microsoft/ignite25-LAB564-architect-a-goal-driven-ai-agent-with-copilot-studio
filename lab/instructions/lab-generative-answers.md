@@ -39,7 +39,7 @@ Navigate to SharePoint Online:
 
    **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
-   **Password: +++@lab.CloudPortalCredential(User1).Password+++**
+   **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
 
 1. Browse the **no-and-low-code** library to inspect its content
 1. Copy the URL of the library in the format `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/noandlowcode/`
@@ -169,7 +169,7 @@ Then test both topics to ensure they work correctly using the following prompts:
 
 **Test the No-Code/Low-Code Topic:**
 ```
-+++How do I create an agent with Copilot Studio?+++
+How do I create an agent with Copilot Studio?
 ```
 
 Expected flow:
@@ -180,7 +180,7 @@ Expected flow:
 
 **Test the Pro-Code Topic:**
 ```
-+++How do I build a custom agent with code?+++
+How do I build a custom agent with code?
 ```
 
 Expected flow:
@@ -216,8 +216,7 @@ We'll replace the default and simple message with a more sophisticated adaptive 
 In the property pane on the right side, select **Edit adaptive card** to open the integrated Adaptive Card designer.
 Configure the adaptive card definition with the following JSON template that includes both response and additional references:
 
-```json
-+++
+```
 {
     "type": "AdaptiveCard",
     "version": "1.4",
@@ -280,7 +279,6 @@ Configure the adaptive card definition with the following JSON template that inc
         }
     ]
 }
-+++
 ```
 
 Select **Save** in the upper right corner of the Adaptive Card designer and **Close** the designer.
@@ -306,7 +304,7 @@ It is now time to test the enhanced topic:
 
 **Test the No-Code/Low-Code Topic with Adaptive Card:**
 ```
-+++How do I create an agent with Copilot Studio?+++
+How do I create an agent with Copilot Studio?
 ```
 
 Expected result:
