@@ -134,10 +134,10 @@ Select **Create** to create your new agent.
 
 After creating the agent, you'll be taken to the agent configuration page. Wait for the **Publish** command in the upper right corner to become enabled. Then, scroll down and in the **Suggested prompts** section, add these helpful prompts:
 
-1. Title: `+++Get development guidance+++` - Prompt: `+++I want to build an agent, what are my options?+++`
-2. Title: `+++No-code approach+++` - Prompt: `+++I want to create agents without programming+++`
-3. Title: `+++Developer approach+++` - Prompt: `+++I'm a developer looking for programmatic agent development+++`
-4. Title: `+++Compare approaches+++` - Prompt: `+++What's the difference between no-code and pro-code agent development?+++`
+1. Title: `Get development guidance` - Prompt: `I want to build an agent, what are my options?`
+2. Title: `No-code approach` - Prompt: `I want to create agents without programming`
+3. Title: `Developer approach` - Prompt: `I'm a developer looking for programmatic agent development`
+4. Title: `Compare approaches` - Prompt: `What's the difference between no-code and pro-code agent development?`
 
 ![The agent configuration page showing the "Suggested prompts" section filled in with the suggested information for the Copilot Extensibility Advisor.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-02.png)
 
@@ -175,7 +175,7 @@ First, create the main topic that will use AI Builder for intelligent routing:
 
 1. In your "Copilot Extensibility Advisor" agent, select the **Topics** tab
 2. Select **+ Add a topic** and choose **From blank**
-3. Rename it as 1️⃣ `+++Intent Analysis+++`
+3. Rename it as 1️⃣ `Intent Analysis`
 4. Fill the field 2️⃣ **Describe what the topic does** with the following text:
 
 ```
@@ -260,23 +260,23 @@ Select the **Inputs** variable of the Prompt Builder action and select the 1️�
 
 ![The configuration of the topic while browsing for a System variable and when selecting "Activity.Text".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/topic-creation-02.png)
 
-Then, configure a new variable to hold the output of the Prompt Builder action. For example, you can name it `+++intentPrediction+++`.
+Then, configure a new variable to hold the output of the Prompt Builder action. For example, you can name it `intentPrediction`.
 
 ### Step 3: Prepare the child topics
 
-Go back to the list of **Topics** and create a new topic from blank. Name it 1️⃣ `+++No-Code/Low-Code Agents+++`, select the 2️⃣ icon with two arrows to configure the trigger condition, and configure the trigger as 3️⃣ **It's redirected to**.
+Go back to the list of **Topics** and create a new topic from blank. Name it 1️⃣ `No-Code/Low-Code Agents`, select the 2️⃣ icon with two arrows to configure the trigger condition, and configure the trigger as 3️⃣ **It's redirected to**.
 
 ![The configuration of the "No-Code/Low-Code Agents" topic so that it will be triggered by a redirection.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/topic-creation-03.png)
 
 The above setting will configure the topic so that users can only reach it through another topic that redirects to it and not directly because of a specific user's prompt.
 
-Now add an action of type **Send a message** and configure the message with value: `+++Cool! You want to create a no-code/low-code agent!+++`.
+Now add an action of type **Send a message** and configure the message with value: `Cool! You want to create a no-code/low-code agent!`.
 
 In the following screenshot you can see how the **No-Code/Low-Code Agents** topic looks like.
 
 ![The "No-Code/Low-Code Agents" topic configured to handle redirection and to send a generic message.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/topic-creation-04.png)
 
-Now, follow the same steps and create yet another topic from blank with name `+++Pro-Code Agents+++`. Configure its trigger condition as like as the previous topic. In the **Send a message** action send the following message: `+++Perfect! You want to create a pro-code agent!+++`
+Now, follow the same steps and create yet another topic from blank with name `Pro-Code Agents`. Configure its trigger condition as like as the previous topic. In the **Send a message** action send the following message: `Perfect! You want to create a pro-code agent!`
 
 In the Part 2 of this lab you will come back to this topics and you will improve them with the **Generative Answers** action.
 
@@ -288,7 +288,7 @@ At the end of the topic, right after the **Prompt Builder**, Insert a new action
 
 ![The action "Set a variable value" highlighted in the topic designer, under the group "Variable management".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/conversation-flow-01.png)
 
-Select the 1️⃣ **Set variable** field, then select to 2️⃣ **Create a new variable**, and name it 3️⃣ `+++approach+++`.
+Select the 1️⃣ **Set variable** field, then select to 2️⃣ **Create a new variable**, and name it 3️⃣ `approach`.
 
 ![The user interface to configure the variable for the "Set variable" action, with the creation of a new variable with name "approach".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/conversation-flow-02.png)
 
@@ -306,9 +306,9 @@ It is now time to evaluate the variable to determine where to redirect the user.
 
 1. No-code/low-code branch
 
-    - Name the first branch on the left with name 1️⃣ `+++No-code/low-code+++`
+    - Name the first branch on the left with name 1️⃣ `No-code/low-code`
     - Click on 2️⃣ **Select a variable** and select the `approach` variable
-    - Set the condition to 3️⃣ **is equal to** and set the value to compare to 4️⃣ `+++no-code/low-code+++`
+    - Set the condition to 3️⃣ **is equal to** and set the value to compare to 4️⃣ `no-code/low-code`
     - Select the 5️⃣**+** button to add a new action inside the branch. Select the group of actions with name **Topic management**, then **Go to another topic**, and then select the topic with name `No-Code/Low-Code Agents` 
 
 ![The user experience to configure the branch for the "No-code/Low-code Agents" branch and topic redirection.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/conversation-flow-04.png)
@@ -316,15 +316,15 @@ It is now time to evaluate the variable to determine where to redirect the user.
 1. Pro-code branch
 
     - Select the **+** icon just before the conditional block and select **Add a condition** to add a new branch
-    - Name the new branch with name `+++Pro-code+++`
+    - Name the new branch with name `Pro-code`
     - Click on  **Select a variable** and select the `approach` variable
-    - Set the condition to **is equal to** and set the value to compare to `+++pro-code+++`
+    - Set the condition to **is equal to** and set the value to compare to `pro-code`
     - Select the **+** button to add a new action inside the branch. Select the group of actions with name **Topic management**, then **Go to another topic**, and then select the topic with name `Pro-Code Agents`
 
 1. All other conditions
 
     - Select the **+** icon and add a new action inside the branch on the right side with name **All other conditions**
-    - Add an action of type **Send a message** and simply write the following message: `+++I'm sorry! Your input is unclear!+++`
+    - Add an action of type **Send a message** and simply write the following message: `I'm sorry! Your input is unclear!`
 
 1. Right after the conditional branch, add an action of type **End current topic**, which is available in the group of **Topic management** actions.
 

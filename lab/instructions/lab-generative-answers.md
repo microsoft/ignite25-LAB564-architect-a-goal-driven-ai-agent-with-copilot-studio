@@ -63,26 +63,26 @@ Navigate to the **Knowledge** section and add SharePoint as a knowledge source:
 
 ![The Copilot Studio dialog to add a new knowledge base. The SharePoint knowledge source is highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-01.png)
 
-1. Enter the SharePoint URL of the first document library `+++https://lodsprodmca.sharepoint.com/sites/LAB564-Content/noandlowcode/+++` and select **Add**
+1. Enter the SharePoint URL of the first document library `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/noandlowcode/` and select **Add**
 
 ![The Copilot Studio dialog to add a new knowledge base with the URL of library filled in and the "Add" command highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-02.png)
 
 1. Configure the new knowledge base with the following settings:
 
-    - **Name**: `+++No-code/low-code content+++`
-    - **Description**: `+++Comprehensive collection of documents about creating agents with no-code/low-code techniques.+++`
+    - **Name**: `No-code/low-code content`
+    - **Description**: `Comprehensive collection of documents about creating agents with no-code/low-code techniques.`
 
 1. Repeat the previous steps for the Pro-code content using the following settings:
 
-    - **URL**: `+++https://lodsprodmca.sharepoint.com/sites/LAB564-Content/procode/+++`
-    - **Name**: `+++Pro-code content+++`
-    - **Description**: `+++Comprehensive collection of documents about creating agents with pro-code techniques.+++`
+    - **URL**: `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/procode/`
+    - **Name**: `Pro-code content`
+    - **Description**: `Comprehensive collection of documents about creating agents with pro-code techniques.`
 
 1. Repeat one last time the previous steps for the Generic content using the following settings:
 
-    - **URL**: `+++https://lodsprodmca.sharepoint.com/sites/LAB564-Content/generic/+++`
-    - **Name**: `+++Generic content+++`
-    - **Description**: `+++Comprehensive collection of generic documents about Microsoft 365 Copilot extensibility.+++`
+    - **URL**: `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/generic/`
+    - **Name**: `Generic content`
+    - **Description**: `Comprehensive collection of generic documents about Microsoft 365 Copilot extensibility.`
 
 ![The SharePoint knowledge sources configuration dialog showing the URLs, names, and descriptions fields for all the three knowledge sources.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-03.png)
 
@@ -144,7 +144,7 @@ Now you can fine tune the settings of the **Generative Answers** action. Select 
     - Expand the section
     - Keep the flag **Send a message** enabled
     - Set **Save LLM response** to **Complete (recommended)**
-    - **Save bot response as**: Create a new variable called `+++noCodeResponse+++`
+    - **Save bot response as**: Create a new variable called `noCodeResponse`
 
 ![The configured settings for the "Generative Answers" action, including a custom seleciton of knowledge sources, medium moderation, and advanced handling of the LLM response stored into a variable with name "noCodeRespose".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-03.png)
 
@@ -157,7 +157,7 @@ Select the **Save** command to save the updated definition of this topic.
 Now enhance the second topic. Open the **Pro-Code Agents** topic for editing and apply the same changes that you applied on the **No-Code/Low-Code Agents** topic. This second time, use the following settings:
 
 - Select only the `Pro-code content` SharePoint knowledge source
-- Save the response of the LLM into a topic variable with name `+++proCodeResponse+++`.
+- Save the response of the LLM into a topic variable with name `proCodeResponse`.
 
 ### Step 4: Testing Both Enhanced Topics
 
@@ -291,8 +291,8 @@ Now in the **Adaptive Card properties** pane select **JSON card** and switch to 
 
 A new simplified editor shows up. Expand the editor selecting the expand arrows in the upper right corner and update the JSON content in order to replace the following text with the corresponding PowerFx formulas:
 
-- **"Topic: ${noCodeTopic}"**: `+++Concatenate("Topic: ", System.Activity.Text)+++`
-- **"${noCodeResponse}"**: `+++Topic.noCodeResponse.Text.MarkdownContent+++`
+- **"Topic: ${noCodeTopic}"**: `Concatenate("Topic: ", System.Activity.Text)`
+- **"${noCodeResponse}"**: `Topic.noCodeResponse.Text.MarkdownContent`
 
 ![The JSON of the Adaptive Card updated with a couple of PowerFx formulas.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/nocode-adaptive-card-03.png)
 
