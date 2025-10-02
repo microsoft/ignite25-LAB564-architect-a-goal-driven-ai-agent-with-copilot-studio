@@ -24,7 +24,7 @@ Get ready to dive deep into the world of intelligent agents and discover how the
 
 ===
 
-!INSTRUCTIONS [Writing advanced topics with AI Builder](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/lab/instructions/lab-topics-ai-builder.md?token=GHSAT0AAAAAADKELEAESJGKDHTG54O47ET42G5J3BQ)
+!INSTRUCTIONS [Writing advanced topics with AI Builder](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/lab/instructions/lab-topics-ai-builder.md)
 
 Congratulations! You have successfully built an intelligent topic routing system that leverages AI Builder for sophisticated conversation management in Microsoft Copilot Studio. 
 
@@ -32,7 +32,7 @@ You can now move to Part 2 and have fun using the Generative Answers action in C
 
 ===
 
-!INSTRUCTIONS [Using Generative Answers in Microsoft Copilot Studio](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/lab/instructions/lab-generative-answers.md?token=GHSAT0AAAAAADKELEAF6UOSMXRCDXY7X5IM2G5J3KQ)
+!INSTRUCTIONS [Using Generative Answers in Microsoft Copilot Studio](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/lab/instructions/lab-generative-answers.md)
 
 Congratulations! You have completed the lab module and you learned how to integrate Generative Answers action in Microsoft Copilot Studio!
 

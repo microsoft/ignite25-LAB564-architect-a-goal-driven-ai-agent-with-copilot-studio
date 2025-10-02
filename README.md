@@ -27,7 +27,6 @@ This session provides best practices and frameworks for building intelligent, sc
 
 1. Microsoft 365 Copilot
 1. Microsoft Copilot Studio
-1. Azure AI Search
 
 ### 🌟 Microsoft Learn MCP Server
 
