@@ -84,13 +84,17 @@ In this exercise, you will create a new agent in Microsoft Copilot Studio that w
 
 ### Step 1: Accessing Microsoft Copilot Studio
 
-Navigate to +++https://copilotstudio.microsoft.com+++ and login with your Microsoft 365 work or school account.
+- Navigate to +++https://copilotstudio.microsoft.com+++ and login with your Microsoft 365 work or school account.
 
 **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
 **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
 
-If this is the very first time you run Copilot Studio and if you don't have a license, you will see the following screen through which you will be able to start a trial period.
+- Wait between 10 and 15 seconds for the process to configure your personal developer environment to start. You will see a dialog informing you about the ongoing process of creating your personal environment.
+
+![The dialog informing about the developer environment creation.](https://raw.githubusercontent.com/microsoft/ignite25-LAB565-makers-in-action-crafting-microsoft-365-copilot-agents-for-real-world/refs/heads/main/img/mcs-creating-environment-01.png)
+
+- If this is the very first time you run Copilot Studio and if you don't have a license, you will see the following screen through which you will be able to start a trial period.
 
 ![The web page to start a trial period for Copilot Studio. You need to provide your country, to choose whether you want to receive messages from Microsoft about offerts, and to select to start the free trial period.](https://microsoft.github.io/copilot-camp/assets/images/make/copilot-studio-00/mcs-trial-01.png)
 
@@ -136,8 +140,8 @@ After creating the agent, you'll be taken to the agent configuration page. Wait 
 
 1. Title: `Get development guidance` - Prompt: `I want to build an agent, what are my options?`
 2. Title: `No-code approach` - Prompt: `I want to create agents without programming`
-3. Title: `Developer approach` - Prompt: `I'm a developer looking for programmatic agent development`
-4. Title: `Compare approaches` - Prompt: `What's the difference between no-code and pro-code agent development?`
+3. Title: `Developer approach` - Prompt: `I am a developer looking for programmatic agent development`
+4. Title: `Compare approaches` - Prompt: `What is the difference between no-code and pro-code agent development?`
 
 ![The agent configuration page showing the "Suggested prompts" section filled in with the suggested information for the Copilot Extensibility Advisor.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-02.png)
 
@@ -237,7 +241,7 @@ Select the words **user's message** at the top of the instrucctions and select 5
 
 ![The user interface to add a new dynamic input property for AI Builder.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/ai-builder-03.png)
 
-Select the option **Text** in popup dialog in order to insert a new text input field, which will be used to feed the AI Builder instructions with dynamic data provided by the topic. When configuring the input filed, you can also provide a **Sample data** value to use for testing purposes.
+Select the option **Text** in popup dialog in order to insert a new text input field, which will be used to feed the AI Builder instructions with dynamic data provided by the topic. When configuring the input filed, name the field as `user's message` and provide the following **Sample data**: `I want to build an agent using the Microsoft 365 Agents SDK`.
 
 As you can see from the user interface, you can have different type of input fields like:
 
@@ -250,17 +254,19 @@ As you can see from the user interface, you can have different type of input fie
 
 In the upper right corner of the AI Builder dialog, you can also configure the output as JSON to see the text properly formatted and to instruct Copilot Studio that the output will be a structured JSON.
 
-Now, select **Test** to validate the output of the prompt using the sample data that you just configured for the input field. When you are happy with the output, select the **Save** command in the lower right side of the dialog to save the generated prompt and to go back to the topic designer. 
-
-Notice that, accordingly to the prompt instructions, when you test the prompt the **Model response** will be a JSON message. 
+Now, select **Test** to validate the output of the prompt using the sample data that you just configured for the input field. Accordingly to the prompt instructions, the **Model response** will be a JSON message, so configure the Output of the model accordingly. 
 
 ![The AI Builder when testing the prompt based on the input field configured as sample data for testing purposes. There is the JSON output of the prompt.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/ai-builder-05.png)
 
-Select the **Inputs** variable of the Prompt Builder action and select the 1️⃣ **...** three dots to bind a variable, then select the 2️⃣ group of **System** variables, and then select 3️⃣ **Activity.Text**, which represents the input prompt provided by the user.
+When you are happy with the output, select the **Save** command in the lower right side of the dialog to save the generated prompt and to go back to the topic designer. 
+
+When you are back to the topic designer, select the **Inputs** variable of the Prompt Builder action and select the 1️⃣ **...** three dots to bind a variable, then select the 2️⃣ group of **System** variables, and then select 3️⃣ **Activity.Text**, which represents the input prompt provided by the user.
 
 ![The configuration of the topic while browsing for a System variable and when selecting "Activity.Text".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/topic-creation-02.png)
 
 Then, configure a new variable to hold the output of the Prompt Builder action. For example, you can name it `intentPrediction`.
+
+Select **Save** in the upper right corner of the topic designer to save the current topic.
 
 ### Step 3: Prepare the child topics
 
@@ -351,7 +357,7 @@ Test the routing to the "No-Code/Low-Code Agents" topic with these sample prompt
 **Test Case 1: Clear No-Code Intent**
 
 ```
-I want to create an agent but I'm not a developer
+I want to create an agent but I am not a developer
 ```
 
 **Expected Result:** The agent should analyze the message, determine it's a no-code/low-code request, and route to the "No-Code/Low-Code Agents" topic, displaying the message "Cool! You want to create a no-code/low-code agent!"
