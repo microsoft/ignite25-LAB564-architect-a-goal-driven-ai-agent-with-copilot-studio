@@ -22,6 +22,8 @@ In this comprehensive lab, you will learn:
 
 Get ready to dive deep into the world of intelligent agents and discover how these cutting-edge technologies can revolutionize your solutions. Let's begin this exciting journey together!
 
+![](https://m365-visitor-stats.azurewebsites.net/copilot-camp/ignite25/LAB564)
+
 ===
 
 !INSTRUCTIONS [Writing advanced topics with AI Builder](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/lab/instructions/lab-topics-ai-builder.md)

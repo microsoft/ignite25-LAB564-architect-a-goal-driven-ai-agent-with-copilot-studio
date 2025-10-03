@@ -53,7 +53,7 @@ Topics in Microsoft Copilot Studio are modular conversation components that hand
 
 For this lab, you'll create a system that helps users get appropriate guidance based on their development preferences:
 
-1. **Main Routing Topic (`Intent Analysis`):** Analyzes user input and determines development approach preference
+1. **Main Routing Topic ("Intent Analysis"):** Analyzes user input and determines development approach preference
 2. **No-Code/Low-Code Agents:** Provides guidance for agents designed with Microsoft Copilot Studio
 3. **Pro-Code Agents:** Offers information about programmatic agent development with Visual Studio Code and the Microsoft 365 Agents Toolkit
 
@@ -73,10 +73,10 @@ The AI Builder prompt will need to:
 - Return structured JSON for reliable topic routing
 
 Example inputs and expected outputs:
-- "I want to build an agent without coding" → `{"approach": "no-code/low-code"}`
-- "How do I develop agents programmatically?" → `{"approach": "pro-code"}`
-- "I'm a developer looking for agent SDKs" → `{"approach": "pro-code"}`
-- "Can I create agents with drag and drop?" → `{"approach": "no-code/low-code"}`
+- "I want to build an agent without coding" → *{"approach": "no-code/low-code"}*
+- "How do I develop agents programmatically?" → *{"approach": "pro-code"}*
+- "I'm a developer looking for agent SDKs" → *{"approach": "pro-code"}*
+- "Can I create agents with drag and drop?" → *{"approach": "no-code/low-code"}*
 
 ## Exercise 2: Creating a New Agent in Copilot Studio
 
@@ -233,7 +233,7 @@ or
 Do not include any additional text or explanation outside the JSON response.
 ```
 
-Select the words `user's message` at the top of the instrucctions and select 5️⃣ **+ Add content** just below the instructions text.
+Select the words **user's message** at the top of the instrucctions and select 5️⃣ **+ Add content** just below the instructions text.
 
 ![The user interface to add a new dynamic input property for AI Builder.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/ai-builder-03.png)
 
@@ -328,7 +328,7 @@ It is now time to evaluate the variable to determine where to redirect the user.
 
 1. Right after the conditional branch, add an action of type **End current topic**, which is available in the group of **Topic management** actions.
 
-Select **Save** to save the updates definition of the `Intent Analysis` topic.
+Select **Save** to save the updates definition of the **Intent Analysis** topic.
 
 ![The final layout of the conditional branches to define the conversation flow.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/conversation-flow-05.png)
 

@@ -54,7 +54,7 @@ The documents are created from the content of the Microsoft Learn site and will 
 
 ### Step 2: Adding SharePoint libraries as a Knowledge Sources
 
-Navigate to +++https://copilotstudio.microsoft.com+++ and open the `Copilot Extensibility Advisor` agent that you created in previous module.
+Navigate to +++https://copilotstudio.microsoft.com+++ and open the **Copilot Extensibility Advisor** agent that you created in previous module.
 
 Navigate to the **Knowledge** section and add SharePoint as a knowledge source:
 
@@ -118,7 +118,7 @@ Open the **No-Code/Low-Code Agents** topic for editing:
 
 ![The user experience to add a "Generative Answers" action to an existing topic.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-01.png)
 
-1. Configure the 1️⃣ **Input** of the action with the 2️⃣ system variable 3️⃣ `Activity.Text`
+1. Configure the 1️⃣ **Input** of the action with the 2️⃣ system variable 3️⃣ **Activity.Text**
 
 ![The user experience to configure the input of the "Generative Answers" action to use the "Activity.Text".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-02.png)
 
@@ -127,7 +127,7 @@ Now you can fine tune the settings of the **Generative Answers** action. Select 
 1. **Knowledge sources**:
 
     - Enable the flag **Search only selected sources** 
-    - Select only the `No-code/Low-code content` SharePoint knowledge source you configured in Exercise 1
+    - Select only the **No-code/Low-code content** SharePoint knowledge source you configured in Exercise 1
 
 1. **Web search**:
 
@@ -144,11 +144,11 @@ Now you can fine tune the settings of the **Generative Answers** action. Select 
     - Expand the section
     - Keep the flag **Send a message** enabled
     - Set **Save LLM response** to **Complete (recommended)**
-    - **Save bot response as**: Create a new variable called `noCodeResponse`
+    - **Save bot response as**: Create a new variable named `noCodeResponse`
 
 ![The configured settings for the "Generative Answers" action, including a custom seleciton of knowledge sources, medium moderation, and advanced handling of the LLM response stored into a variable with name "noCodeRespose".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-03.png)
 
-The Generative Answers action is now configured to use only the `No-code/Low-code content` source, to not rely on web or LLM general knowledge, and to store the complete LLM response into a topic variable with name `noCodeResponse`.
+The Generative Answers action is now configured to use only the **No-code/Low-code content** source, to not rely on web or LLM general knowledge, and to store the complete LLM response into a topic variable with name **noCodeResponse**.
 
 Select the **Save** command to save the updated definition of this topic.
 
@@ -161,7 +161,7 @@ Now enhance the second topic. Open the **Pro-Code Agents** topic for editing and
 
 ### Step 4: Testing Both Enhanced Topics
 
-**Save** both topics and **Publish** your agent. Enable the 1️⃣ **Test** panel, toggle the 2️⃣ **Activity Map** to `On`, and enable the option to 3️⃣ **Track between topics**.
+**Save** both topics and **Publish** your agent. Enable the 1️⃣ **Test** panel, toggle the 2️⃣ **Activity Map** to **On**, and enable the option to 3️⃣ **Track between topics**.
 
 ![The user experience of Copilot Studio to enable the test interface, the activity map, and the tracking between topics.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/testing-02.png)
 
@@ -191,9 +191,9 @@ Expected flow:
 
 This approach ensures that each topic has a focused scope and searches the most relevant knowledge source for the user's needs, providing more accurate and targeted responses.
 
-## Exercise 3: Customizing Output with PowerFx and Adaptive Cards (bonus step)
+## Exercise 3: Customizing Output with PowerFx and Adaptive Cards (bonus exercise)
 
-If you like, and if time permits, in this bonus exercise you will enhance the **No-Code/Low-Code Agents** topic created in Exercise 2 by using PowerFx expressions to parse and format the responses from the Generative Answers actions. You'll create adaptive cards that display both the AI-generated response and the source references, providing users with comprehensive and visually appealing information.
+This is a bonus exercise and it should take up to 10 mins to complete. Depending on the leftover time you can skip it or you can go through it. In this bonus exercise you will enhance the **No-Code/Low-Code Agents** topic created in Exercise 2 by using PowerFx expressions to parse and format the responses from the Generative Answers actions. You'll create adaptive cards that display both the AI-generated response and the source references, providing users with comprehensive and visually appealing information.
 
 ### Step 1: Enhancing the No-Code/Low-Code Topic with Adaptive Cards
 
