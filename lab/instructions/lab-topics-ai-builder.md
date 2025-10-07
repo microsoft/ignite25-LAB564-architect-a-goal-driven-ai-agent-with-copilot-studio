@@ -92,11 +92,11 @@ In this exercise, you will create a new agent in Microsoft Copilot Studio that w
 
 - Wait between 10 and 15 seconds for the process to configure your personal developer environment to start. You will see a dialog informing you about the ongoing process of creating your personal environment.
 
-![The dialog informing about the developer environment creation.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-makers-in-action-crafting-microsoft-365-copilot-agents-for-real-world/refs/heads/main/img/mcs-creating-environment-01.png)
+![The dialog informing about the developer environment creation.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/mcs-creating-environment-01.png)
 
 - If this is the very first time you run Copilot Studio you will need to select your country and to select the **Get Started** button.
 
-![The web page to start using Copilot Studio. You need to provide your country, to choose whether you want to receive messages from Microsoft about offerts, and to select to "Get Started".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-makers-in-action-crafting-microsoft-365-copilot-agents-for-real-world/refs/heads/main/img/mcs-get-started-01.png)
+![The web page to start using Copilot Studio. You need to provide your country, to choose whether you want to receive messages from Microsoft about offerts, and to select to "Get Started".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/mcs-get-started-01.png)
 
 - Skip, or go through, the "Welcome to Copilot Studio!" dialog window
 
