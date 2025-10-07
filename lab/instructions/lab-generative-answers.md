@@ -42,11 +42,8 @@ Navigate to SharePoint Online:
    **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
 
 1. Browse the **no-and-low-code** library to inspect its content
-1. Copy the URL of the library in the format `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/noandlowcode/`
 1. Browse the **pro-code** library to inspect its content
-1. Copy the URL of the library in the format `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/procode/`
 1. Browse the **generic** library to inspect its content
-1. Copy the URL of the library in the format `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/generic/`
 
 ![The SharePoint site with the knowledge base for the agent. There are three libraries highlighted: "no-and-low-code", "pro-code", and "generic".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/spo-content-01.png)
 
@@ -54,7 +51,7 @@ The documents are created from the content of the Microsoft Learn site and will 
 
 ### Step 2: Adding SharePoint libraries as a Knowledge Sources
 
-Navigate to +++https://copilotstudio.microsoft.com+++ and open the **Copilot Extensibility Advisor** agent that you created in previous module.
+Navigate to +++https://copilotstudio.microsoft.com+++ and open the **Copilot Extensibility Advisor** agent that you created in previous module. You can find it in the **Recents** section, or in the full list of agents.
 
 Navigate to the **Knowledge** section and add SharePoint as a knowledge source:
 
@@ -69,20 +66,20 @@ Navigate to the **Knowledge** section and add SharePoint as a knowledge source:
 
 1. Configure the new knowledge base with the following settings:
 
-    - **Name**: `No-code/low-code content`
-    - **Description**: `Comprehensive collection of documents about creating agents with no-code/low-code techniques.`
+    - **Name**: rename it with value `No-code/low-code content`
+    - **Description**: change it with value `Comprehensive collection of documents about creating agents with no-code/low-code techniques.`
 
 1. Repeat the previous steps for the Pro-code content using the following settings:
 
     - **URL**: `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/procode/`
-    - **Name**: `Pro-code content`
-    - **Description**: `Comprehensive collection of documents about creating agents with pro-code techniques.`
+    - **Name**: rename it with value `Pro-code content`
+    - **Description**: change it with value `Comprehensive collection of documents about creating agents with pro-code techniques.`
 
 1. Repeat one last time the previous steps for the Generic content using the following settings:
 
     - **URL**: `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/generic/`
-    - **Name**: `Generic content`
-    - **Description**: `Comprehensive collection of generic documents about Microsoft 365 Copilot extensibility.`
+    - **Name**: rename it with value `Generic content`
+    - **Description**: change it with value `Comprehensive collection of generic documents about Microsoft 365 Copilot extensibility.`
 
 ![The SharePoint knowledge sources configuration dialog showing the URLs, names, and descriptions fields for all the three knowledge sources.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-03.png)
 
@@ -118,7 +115,7 @@ Open the **No-Code/Low-Code Agents** topic for editing:
 
 ![The user experience to add a "Generative Answers" action to an existing topic.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-01.png)
 
-1. Configure the 1️⃣ **Input** of the action with the 2️⃣ system variable 3️⃣ **Activity.Text**
+1. Configure the 1️⃣ **Input** of the action with the 2️⃣ system variable 3️⃣ **Activity.Text** and close the panel to select the input
 
 ![The user experience to configure the input of the "Generative Answers" action to use the "Activity.Text".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-02.png)
 

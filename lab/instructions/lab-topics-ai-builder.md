@@ -32,7 +32,7 @@ AI Builder brings advanced artificial intelligence capabilities directly into yo
 
 For example, if a user says "I need help building an agent," AI Builder can analyze this request and determine whether they're interested in:
 - No-code/low-code solutions using Copilot Studio's visual interface
-- Pro-code development using VS Code and the Microsoft 365 Agents Toolkit
+- Pro-code development using Visual Studio Code and the Microsoft 365 Agents Toolkit
 
 This intelligent analysis enables your agent to provide the most relevant help immediately.
 
@@ -84,7 +84,7 @@ In this exercise, you will create a new agent in Microsoft Copilot Studio that w
 
 ### Step 1: Accessing Microsoft Copilot Studio
 
-- Navigate to +++https://copilotstudio.microsoft.com+++ and login with your Microsoft 365 work or school account.
+- Open the Edge browser and navigate to +++https://copilotstudio.microsoft.com+++ and login with the following suggested Microsoft 365 work or school account:
 
 **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
@@ -94,15 +94,19 @@ In this exercise, you will create a new agent in Microsoft Copilot Studio that w
 
 ![The dialog informing about the developer environment creation.](https://raw.githubusercontent.com/microsoft/ignite25-LAB565-makers-in-action-crafting-microsoft-365-copilot-agents-for-real-world/refs/heads/main/img/mcs-creating-environment-01.png)
 
-- If this is the very first time you run Copilot Studio and if you don't have a license, you will see the following screen through which you will be able to start a trial period.
+- If this is the very first time you run Copilot Studio you will need to select your country and to select the **Get Started** button.
 
-![The web page to start a trial period for Copilot Studio. You need to provide your country, to choose whether you want to receive messages from Microsoft about offerts, and to select to start the free trial period.](https://microsoft.github.io/copilot-camp/assets/images/make/copilot-studio-00/mcs-trial-01.png)
+![The web page to start using Copilot Studio. You need to provide your country, to choose whether you want to receive messages from Microsoft about offerts, and to select to "Get Started".](https://raw.githubusercontent.com/microsoft/ignite25-LAB565-makers-in-action-crafting-microsoft-365-copilot-agents-for-real-world/refs/heads/main/img/mcs-get-started-01.png)
+
+- Skip, or go through, the "Welcome to Copilot Studio!" dialog window
 
 ### Step 2: Creating the new agent
 
-Once you activated the Copilot Studio license, select **Create** in the left navigation menu of Copilot Studio, then choose **Agent** to create a new agent, or simply start with the agent creation wizard that you will see for the first time.
+Once you activated the Copilot Studio license, the tool will start with the agent creation wizard. Select **Configure** to switch to the agent configuration. If you cancel the wizard, select **Create** in the left navigation menu of Copilot Studio, then choose **+ New agent** to create a new agent and select **Configure** in the agent creation wizard.
 
-Choose to **Configure** and define your new agent with the following settings:
+![The agent creation wizard in Copilot Studio with the command to switch to "Configure" mode highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-01.png)
+
+Once you are in the **Configure** panel, define your new agent with the following settings:
 
 - **Name**: 
 
@@ -136,7 +140,7 @@ Select **Create** to create your new agent.
 
 ### Step 3: Configuring the agent's conversation starters
 
-After creating the agent, you'll be taken to the agent configuration page. Wait for the **Publish** command in the upper right corner to become enabled. Then, scroll down and in the **Suggested prompts** section, add these helpful prompts:
+After creating the agent, you'll be taken to the agent configuration page. Wait for the **Publish** command in the upper right corner to become enabled. Then, scroll down to the **Suggested prompts** section, select the command **+ Add suggested prompts**, and add these helpful prompts:
 
 1. Title: `Get development guidance` - Prompt: `I want to build an agent, what are my options?`
 2. Title: `No-code approach` - Prompt: `I want to create agents without programming`
@@ -155,17 +159,19 @@ Ensure that the following settings are configured for optimal performance:
 1. Confirm that the **GPT-4o** model is selected for the best natural language understanding capabilities
 1. **Save** any changes made to the configuration
 
+This is to ensure that the agent will rely on Generative Orchestration and on GPT-4o when it comes to processing user's prompts.
+
 ![The Microsoft Copilot Studio settings for the new agent with Generative Orchestrator enabled and GPT-4o model highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-03.png)
 
-Now select the **Settings** command in the upper right corner of the screen and under the **Generative AI** section of settings, in the **Knowledge** group of settings, disable the following options:
+Now select the **Settings** command in the upper right corner of the screen and under the **Generative AI** section of settings, in the **Knowledge** group of settings, ensure that the following options are disabled:
 
 - **Use general knowledge**
 - **Use information from the Web**
 
 Select **Save** to update the settings and then close the settings panel selecting the **X** icon in the upper right corner.
+This is to ensure that only the knowledge base explicitly provided to the agent will be used when processing user's prompts.
 
 ![The Microsoft Copilot Studio settings to disable general knowledge and access to public web content.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-04.png)
-
 
 Your "Copilot Extensibility Advisor" agent is now ready to be enhanced with intelligent topic routing capabilities.
 
@@ -177,9 +183,9 @@ In this exercise, you will create and configure an AI Builder model that analyze
 
 First, create the main topic that will use AI Builder for intelligent routing:
 
-1. In your "Copilot Extensibility Advisor" agent, select the **Topics** tab
+1. In your "Copilot Extensibility Advisor" agent, select the **Topics** tab in the upper navigation of the agent designer
 2. Select **+ Add a topic** and choose **From blank**
-3. Rename it as 1️⃣ `Intent Analysis`
+3. Click the top area 1️⃣ of the dialog to give a name to the new Topic, rename it as `Intent Analysis`
 4. Fill the field 2️⃣ **Describe what the topic does** with the following text:
 
 ```
@@ -258,43 +264,51 @@ Now, select **Test** to validate the output of the prompt using the sample data 
 
 ![The AI Builder when testing the prompt based on the input field configured as sample data for testing purposes. There is the JSON output of the prompt.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/ai-builder-05.png)
 
-When you are happy with the output, select the **Save** command in the lower right side of the dialog to save the generated prompt and to go back to the topic designer. 
+Select the **Save** command in the lower right side of the dialog to save the generated prompt and to go back to the topic designer. 
 
 When you are back to the topic designer, select the **Inputs** variable of the Prompt Builder action and select the 1️⃣ **...** three dots to bind a variable, then select the 2️⃣ group of **System** variables, and then select 3️⃣ **Activity.Text**, which represents the input prompt provided by the user.
 
 ![The configuration of the topic while browsing for a System variable and when selecting "Activity.Text".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/topic-creation-02.png)
 
-Then, configure a new variable to hold the output of the Prompt Builder action. For example, you can name it `intentPrediction`.
+Then, configure a new variable to hold the output of the Prompt Builder action. To do so, click on the 1️⃣ **Select a variable** area in the **Outputs** section of the action. Then select the 2️⃣ **Create new** command to create a new variable.
+
+![The configuration of the output variable for the Prompt Builder action. There is the "Create new" button highlighted, together with the "Select a variable" area.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/prompt-output-variable-01.png)
+
+Copilot Studio will create a new variable with name **Var1**. Select the name of the variable 1️⃣ in the action to open a panel, on the right side. From the panel you can rename the variable from 2️⃣ **Var1** to `intentPrediction`.
+
+![The configuration of the output variable for the Prompt Builder action. There is a side panel, on the right side, through which you can rename the selected variable.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/prompt-output-variable-02.png)
 
 Select **Save** in the upper right corner of the topic designer to save the current topic.
 
 ### Step 3: Prepare the child topics
 
-Go back to the list of **Topics** and create a new topic from blank. Name it 1️⃣ `No-Code/Low-Code Agents`, select the 2️⃣ icon with two arrows to configure the trigger condition, and configure the trigger as 3️⃣ **It's redirected to**.
+Go back to the list of **Topics** and create a new topic from blank. Name it 1️⃣ `No-Code/Low-Code Agents`, hoover on the triggering area of the topic where you see **The agent chooses**, select the 2️⃣ icon with two arrows to configure the trigger condition, and configure the trigger as 3️⃣ **It's redirected to**.
 
 ![The configuration of the "No-Code/Low-Code Agents" topic so that it will be triggered by a redirection.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/topic-creation-03.png)
 
 The above setting will configure the topic so that users can only reach it through another topic that redirects to it and not directly because of a specific user's prompt.
 
 Now add an action of type **Send a message** and configure the message with value: `Cool! You want to create a no-code/low-code agent!`.
+Select **Save** in the upper right corner of the topic designer to save the current topic.
 
 In the following screenshot you can see how the **No-Code/Low-Code Agents** topic looks like.
 
 ![The "No-Code/Low-Code Agents" topic configured to handle redirection and to send a generic message.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/topic-creation-04.png)
 
-Now, follow the same steps and create yet another topic from blank with name `Pro-Code Agents`. Configure its trigger condition as like as the previous topic. In the **Send a message** action send the following message: `Perfect! You want to create a pro-code agent!`
+Now, follow the same steps and create yet another topic from blank with name `Pro-Code Agents`. Configure its trigger condition as like as the previous topic. In the **Send a message** action send the following message: `Perfect! You want to create a pro-code agent!`.
+Select **Save** in the upper right corner of the topic designer to save the current topic.
 
 In the Part 2 of this lab you will come back to this topics and you will improve them with the **Generative Answers** action.
 
 ### Step 4: Building the Conversation Flow
 
-Now, go back to the **Intent Analysis** topic and create the conversation flow.
+Now, go back to the list of **Topics** and select **Intent Analysis** topic to edit it and to create the conversation flow.
 
 At the end of the topic, right after the **Prompt Builder**, Insert a new action of type **Set a variable value**, under the group **Variable management**.
 
 ![The action "Set a variable value" highlighted in the topic designer, under the group "Variable management".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/conversation-flow-01.png)
 
-Select the 1️⃣ **Set variable** field, then select to 2️⃣ **Create a new variable**, and name it 3️⃣ `approach`.
+Select the 1️⃣ **Set variable** field, then select to 2️⃣ **Create a new variable**. Select the new **Var1** variable to show the side panel and rename it 3️⃣ to `approach`.
 
 ![The user interface to configure the variable for the "Set variable" action, with the creation of a new variable with name "approach".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/conversation-flow-02.png)
 
@@ -319,7 +333,7 @@ It is now time to evaluate the variable to determine where to redirect the user.
 
 ![The user experience to configure the branch for the "No-code/Low-code Agents" branch and topic redirection.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/conversation-flow-04.png)
 
-1. Pro-code branch
+2. Pro-code branch
 
     - Select the **+** icon just before the conditional block and select **Add a condition** to add a new branch
     - Name the new branch with name `Pro-code`
@@ -327,12 +341,12 @@ It is now time to evaluate the variable to determine where to redirect the user.
     - Set the condition to **is equal to** and set the value to compare to `pro-code`
     - Select the **+** button to add a new action inside the branch. Select the group of actions with name **Topic management**, then **Go to another topic**, and then select the topic with name `Pro-Code Agents`
 
-1. All other conditions
+3. All other conditions
 
     - Select the **+** icon and add a new action inside the branch on the right side with name **All other conditions**
     - Add an action of type **Send a message** and simply write the following message: `I'm sorry! Your input is unclear!`
 
-1. Right after the conditional branch, add an action of type **End current topic**, which is available in the group of **Topic management** actions.
+4. Right after the conditional branch, add an action of type **End current topic**, which is available in the group of **Topic management** actions.
 
 Select **Save** to save the updates definition of the **Intent Analysis** topic.
 

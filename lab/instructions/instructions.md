@@ -40,7 +40,7 @@ Congratulations! You have completed the lab module and you learned how to integr
 
 This approach demonstrates the flexibility of Microsoft Copilot Studio in creating specialized AI agents that can intelligently route conversations, access different knowledge sources, and provide customized responses based on your specific business needs.
 
-The patterns you've learned today open doors to countless possibilities—what you've explored is just the beginning of what you can achieve with Microsoft 365 Copilot. Let your creativity and curiosity guide you as you imagine and build even more innovative solutions!
+The patterns you've learned today open doors to countless possibilities. What you've explored is just the beginning of what you can achieve with Microsoft 365 Copilot. Let your creativity and curiosity guide you as you imagine and build even more innovative solutions!
 
 ===
 
