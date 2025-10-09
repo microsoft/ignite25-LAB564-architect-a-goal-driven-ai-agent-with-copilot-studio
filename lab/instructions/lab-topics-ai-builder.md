@@ -243,11 +243,11 @@ or
 Do not include any additional text or explanation outside the JSON response.
 ```
 
-Select the words **user's message** at the top of the instrucctions and select 5️⃣ **+ Add content** just below the instructions text.
+Select the words **user's message** at the top of the instructions and select 5️⃣ **+ Add content** just below the instructions text.
 
 ![The user interface to add a new dynamic input property for AI Builder.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/ai-builder-03.png)
 
-Select the option **Text** in popup dialog in order to insert a new text input field, which will be used to feed the AI Builder instructions with dynamic data provided by the topic. When configuring the input filed, name the field as `user's message` and provide the following **Sample data**: `I want to build an agent using the Microsoft 365 Agents SDK`.
+Select the option **Text** in popup dialog in order to insert a new text input field, which will be used to feed the AI Builder instructions with dynamic data provided by the topic. When configuring the input field, name the field as `user's message` and provide the following **Sample data**: `I want to build an agent using the Microsoft 365 Agents SDK`.
 
 As you can see from the user interface, you can have different type of input fields like:
 
@@ -282,7 +282,7 @@ Select **Save** in the upper right corner of the topic designer to save the curr
 
 ### Step 3: Prepare the child topics
 
-Go back to the list of **Topics** and create a new topic from blank. Name it 1️⃣ `No-Code/Low-Code Agents`, hoover on the triggering area of the topic where you see **The agent chooses**, select the 2️⃣ icon with two arrows to configure the trigger condition, and configure the trigger as 3️⃣ **It's redirected to**.
+Go back to the list of **Topics** and create a new topic from blank. Name it 1️⃣ `No-Code/Low-Code Agents`, hover on the triggering area of the topic where you see **The agent chooses**, select the 2️⃣ icon with two arrows to configure the trigger condition, and configure the trigger as 3️⃣ **It's redirected to**.
 
 ![The configuration of the "No-Code/Low-Code Agents" topic so that it will be triggered by a redirection.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/topic-creation-03.png)
 

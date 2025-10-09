@@ -89,7 +89,7 @@ Wait for the status to change to **Ready** before proceeding to the next exercis
 
 ![The knowledge sources of the agent with the three SharePoint sources marked as "ready".](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-04.png)
 
-Now your agent has specific knowledge bases about creating agents with both no-code/low-code and pro-code techniques, as well as some generic knownledge about extending Microsoft 365 Copilot.
+Now your agent has specific knowledge bases about creating agents with both no-code/low-code and pro-code techniques, as well as some generic knowledge about extending Microsoft 365 Copilot.
 
 ## Exercise 2: Adding Generative Answers to Existing Topics
 
@@ -316,4 +316,4 @@ Expected result:
 
 ![The test panel showing the Adaptive Card rendered by the "No-Code/Low-Code Agents" topic.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/enhanced-testing-01.png)
 
-Feel free to enhance als the **Pro-Code Agents** topic to use an Adaptive Card for rendering, if you like and if time permits.
+Feel free to enhance also the **Pro-Code Agents** topic to use an Adaptive Card for rendering, if you like and if time permits.
