@@ -12,7 +12,7 @@ In this lab module you will learn:
 
 ### What is Topic Redirection?
 
-Topic redirection in Microsoft Copilot Studio is a powerful feature that allows your agent to dynamically route conversations to specific topics based on user input or conditions. Think of it like a smart traffic controller for conversations:
+Topic redirection in Microsoft Copilot Studio is a powerful feature that allows your agent to dynamically route conversations to specific topics based on user input or conditions. Think of it like a smart traffic controller for conversations.
 
 Imagine you have a customer service agent that can help with different types of requests - billing questions, technical support, or product information. Instead of having one massive conversation flow that handles everything, topic redirection allows you to:
 
