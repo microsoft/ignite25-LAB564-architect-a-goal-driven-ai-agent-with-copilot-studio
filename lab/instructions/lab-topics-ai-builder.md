@@ -104,7 +104,7 @@ In this exercise, you will create a new agent in Microsoft Copilot Studio that w
 
 Once you activated the Copilot Studio license, the tool will start with the agent creation wizard. Select **Configure** to switch to the agent configuration. If you cancel the wizard, select **Create** in the left navigation menu of Copilot Studio, then choose **+ New agent** to create a new agent and select **Configure** in the agent creation wizard.
 
-![The agent creation wizard in Copilot Studio with the command to switch to "Configure" mode highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-01.png)
+![The agent creation wizard in Copilot Studio with the command to switch to "Configure" mode highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-00.png)
 
 Once you are in the **Configure** panel, define your new agent with the following settings:
 
@@ -288,7 +288,8 @@ Go back to the list of **Topics** and create a new topic from blank. Name it 1ï¸
 
 The above setting will configure the topic so that users can only reach it through another topic that redirects to it and not directly because of a specific user's prompt.
 
-Now add an action of type **Send a message** and configure the message with value: `Cool! You want to create a no-code/low-code agent!`.
+Now select the **+** right after the topic trigger, select to add an action of type **Send a message**, and configure the message with value: `Cool! You want to create a no-code/low-code agent!`.
+
 Select **Save** in the upper right corner of the topic designer to save the current topic.
 
 In the following screenshot you can see how the **No-Code/Low-Code Agents** topic looks like.
