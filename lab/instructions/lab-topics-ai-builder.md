@@ -168,12 +168,12 @@ Now select the **Settings** command in the upper right corner of the screen and 
 - **Use general knowledge**
 - **Use information from the Web**
 
-Select **Save** to update the settings and then close the settings panel selecting the **X** icon in the upper right corner.
-This is to ensure that only the knowledge base explicitly provided to the agent will be used when processing user's prompts.
+Select **Save** to update the settings and to ensure that only the knowledge base explicitly provided to the agent will be used when processing user's prompts.
 
 ![The Microsoft Copilot Studio settings to disable general knowledge and access to public web content.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-04.png)
 
 Your "Copilot Extensibility Advisor" agent is now ready to be enhanced with intelligent topic routing capabilities.
+Close the settings panel selecting the **X** icon in the upper right corner.
 
 ## Exercise 3: Creating the AI Builder Model
 
@@ -258,7 +258,7 @@ As you can see from the user interface, you can have different type of input fie
 
 ![The input field configured in the user experience of AI Builder. There is the name of the input field and a sample data value for testing purposes.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/ai-builder-04.png)
 
-In the upper right corner of the AI Builder dialog, you can also configure the output as JSON to see the text properly formatted and to instruct Copilot Studio that the output will be a structured JSON.
+**IMPORTANT**: In the upper right corner of the AI Builder dialog, the output format must be set as JSON to see the text properly formatted and to instruct Copilot Studio that the output will be a structured JSON.
 
 Now, select **Test** to validate the output of the prompt using the sample data that you just configured for the input field. Accordingly to the prompt instructions, the **Model response** will be a JSON message, so configure the Output of the model accordingly. 
 
