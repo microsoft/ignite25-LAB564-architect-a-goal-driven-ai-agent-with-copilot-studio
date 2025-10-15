@@ -151,10 +151,39 @@ Select the **Save** command to save the updated definition of this topic.
 
 ### Step 3: Adding Generative Answers to the Pro-Code Topic
 
-Now enhance the second topic. Open the **Pro-Code Agents** topic for editing and apply the same changes that you applied on the **No-Code/Low-Code Agents** topic. This second time, use the following settings:
+Now enhance the second topic. Open the **Pro-Code Agents** topic for editing and apply the same changes that you applied on the **No-Code/Low-Code Agents** topic:
 
-- Select only the `Pro-code content` SharePoint knowledge source
-- Save the response of the LLM into a topic variable with name `proCodeResponse`.
+1. Select the **+** to insert a new action right after the **Send a message** action that you configured in the previous part of this lab
+1. Select **Advanced** -> **Generative Answers**
+1. Configure the 1️⃣ **Input** of the action with the 2️⃣ system variable 3️⃣ **Activity.Text** and close the panel to select the input
+
+Now you can fine tune the settings of the **Generative Answers** action. Select the **Edit** button and configure the following properties:
+
+1. **Knowledge sources**:
+
+    - Enable the flag **Search only selected sources** 
+    - Select only the **Pro-code content** SharePoint knowledge source you configured in Exercise 1
+
+1. **Web search**:
+
+    - Disable the flag **Web search**
+    - Disable the flag **Allow the AI to use its own general knowledge (preview)**
+
+1. **Content moderation**: 
+
+    - Enable the flag **Customize**
+    - Set to **Medium** for balanced content filtering
+
+1. **Advanced**:
+
+    - Expand the section
+    - Keep the flag **Send a message** enabled
+    - Set **Save LLM response** to **Complete (recommended)**
+    - **Save bot response as**: Create a new variable named `proCodeResponse`
+
+The Generative Answers action is now configured to use only the **Pro-code content** source, to not rely on web or LLM general knowledge, and to store the complete LLM response into a topic variable with name **proCodeResponse**.
+
+Select the **Save** command to save the updated definition of this topic.
 
 ### Step 4: Testing Both Enhanced Topics
 
@@ -198,7 +227,8 @@ Open the **No-Code/Low-Code Agents** topic for editing:
 
 1. Navigate to the **Topics** section and select the **No-Code Low-Code Agents** topic
 1. Locate the **Generative Answers** node 
-1. Edit its properties and in the **Advanced** section disable the option **Send a message**
+1. Edit its properties by selecting the **...** in the upper right corner and then ***Properties**
+1. In the **Advanced** section disable the option **Send a message**
 
 ![The option to "Send a message" disabled in the "Advanced" properties of the "Generative Answers" action.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/generative-answers-04.png)
 

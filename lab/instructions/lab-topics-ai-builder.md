@@ -223,7 +223,7 @@ In the 4️⃣ textarea just below the model selection, you can write the instru
 ```
 You are an expert assistant that analyses user messages to determine their preferred approach for building AI agents. 
 
-Analyze the user's message and determine if they are interested in:
+Analyze the [user's message] and determine if they are interested in:
 1. "no-code/low-code" - Visual, drag-and-drop development using Copilot Studio's interface
 2. "pro-code" - Programmatic development using code, SDKs, or development tools
 
@@ -243,7 +243,7 @@ or
 Do not include any additional text or explanation outside the JSON response.
 ```
 
-Select the words **user's message** at the top of the instructions and select 5️⃣ **+ Add content** just below the instructions text.
+Select the words **[user's message]** at the top of the instructions and select 5️⃣ **+ Add content** just below the instructions text.
 
 ![The user interface to add a new dynamic input property for AI Builder.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/ai-builder-03.png)
 
