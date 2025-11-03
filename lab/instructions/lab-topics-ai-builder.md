@@ -106,7 +106,7 @@ Once you activated the Copilot Studio license, the tool will start with the agen
 
 ![The agent creation wizard in Copilot Studio with the command to switch to "Configure" mode highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-00.png)
 
-Once you are in the **Configure** panel, define your new agent with the following settings:
+Once you are in the **Configure** panel, define your new agent with the following settings (you can copy and paste the values):
 
 - **Name**: 
 
@@ -186,7 +186,7 @@ First, create the main topic that will use AI Builder for intelligent routing:
 1. In your "Copilot Extensibility Advisor" agent, select the **Topics** tab in the upper navigation of the agent designer
 2. Select **+ Add a topic** and choose **From blank**
 3. Click the top area 1️⃣ of the dialog to give a name to the new Topic, rename it as `Intent Analysis`
-4. Fill the field 2️⃣ **Describe what the topic does** with the following text:
+4. Fill the field 2️⃣ **Describe what the topic does** with the following text (you can copy and paste the value):
 
 ```
 Analyses user messages to determine development approach preference and routes to appropriate topics. Trigger phrases can be: "I want to build an agent", "How do I create agents", "I need help with agent development", "Can you help me develop a chatbot", "I'm looking for agent building tools", "What are my options for creating agents".
@@ -218,7 +218,7 @@ In the 2️⃣ **Instructions** section you can select the 3️⃣foundational m
 
 Let's use the default GPT-4.1-mini, which is enough for the prompt you are going to create.
 
-In the 4️⃣ textarea just below the model selection, you can write the instructions for your new prompt. For example, use the following text:
+In the 4️⃣ textarea just below the model selection, you can write the instructions for your new prompt. For example, use the following text (you can copy and paste the value):
 
 ```
 You are an expert assistant that analyses user messages to determine their preferred approach for building AI agents. 
@@ -315,9 +315,7 @@ Select the 1️⃣ **Set variable** field, then select to 2️⃣ **Create a new
 
 Now, select the **To value** field of the action and set its value to the following PowerFx formula:
 
-```
-Topic.intentPrediction.structuredOutput.approach
-```
+`Topic.intentPrediction.structuredOutput.approach`
 
 The above syntax instructs Copilot Studio to assign to the variable the actual value of the approach property in the JSON response that comes back from the Prompt Builder action.
 
@@ -371,16 +369,13 @@ Test the routing to the "No-Code/Low-Code Agents" topic with these sample prompt
 
 **Test Case 1: Clear No-Code Intent**
 
-```
-I want to create an agent but I am not a developer
-```
+`I want to create an agent but I am not a developer`
 
 **Expected Result:** The agent should analyze the message, determine it's a no-code/low-code request, and route to the "No-Code/Low-Code Agents" topic, displaying the message "Cool! You want to create a no-code/low-code agent!"
 
 **Test Case 2: Developer-focused Request**
-```
-Is there any SDK for building conversational agents?
-```
+
+`Is there any SDK for building conversational agents?`
 
 **Expected Result:** The agent should identify this as a pro-code request and route to the "Pro-Code Agents" topic, displaying "Perfect! You want to create a pro-code agent!"
 
