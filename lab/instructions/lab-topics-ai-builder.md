@@ -290,13 +290,15 @@ The above setting will configure the topic so that users can only reach it throu
 
 Now select the **+** right after the topic trigger, select to add an action of type **Send a message**, and configure the message with value: `Cool! You want to create a no-code/low-code agent!`.
 
+Then, select the **+** right after the send a message action, select to add an action of type **Topic Management** > **End all topics**, to end any active topic.
+
 Select **Save** in the upper right corner of the topic designer to save the current topic.
 
 In the following screenshot you can see how the **No-Code/Low-Code Agents** topic looks like.
 
 ![The "No-Code/Low-Code Agents" topic configured to handle redirection and to send a generic message.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/topic-creation-04.png)
 
-Now, follow the same steps and create yet another topic from blank with name `Pro-Code Agents`. Configure its trigger condition as like as the previous topic. In the **Send a message** action send the following message: `Perfect! You want to create a pro-code agent!`.
+Now, follow the same steps and create yet another topic from blank with name `Pro-Code Agents`. Configure its trigger condition as like as the previous topic. In the **Send a message** action send the following message: `Perfect! You want to create a pro-code agent!`. Remember to add the **End all topics** action at the end, to end all the active topics.
 Select **Save** in the upper right corner of the topic designer to save the current topic.
 
 In the Part 2 of this lab you will come back to this topics and you will improve them with the **Generative Answers** action.
