@@ -25,8 +25,8 @@ This session provides best practices and frameworks for building intelligent, sc
 
 ### 💻 Technologies Used
 
-1. Microsoft 365 Copilot
-1. Microsoft Copilot Studio
+1. [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365-copilot)
+1. [Microsoft Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-what-is-copilot-studio)
 
 ### 🌟 Microsoft Learn MCP Server
 
