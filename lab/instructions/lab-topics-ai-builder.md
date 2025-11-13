@@ -156,7 +156,7 @@ Select the **Save** button to confirm your changes.
 Ensure that the following settings are configured for optimal performance:
 
 1. In the agent's **Details** panel, verify that the **Use generative AI to determine how best to respond to users and events** option is enabled
-1. Confirm that the **GPT-4o** model is selected for the best natural language understanding capabilities
+1. Confirm that the **GPT-5 Chat (preview)** model is selected for the best natural language understanding capabilities
 1. **Save** any changes made to the configuration
 
 This is to ensure that the agent will rely on Generative Orchestration and on GPT-4o when it comes to processing user's prompts.
