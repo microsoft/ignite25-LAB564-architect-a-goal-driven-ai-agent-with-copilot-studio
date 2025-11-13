@@ -35,7 +35,7 @@ In this step, you'll browse an already existing SharePoint site collection and s
 
 Navigate to SharePoint Online:
 
-1. Open a browser and go to **+++https://lodsprodmca.sharepoint.com/sites/LAB564-Content+++** using your work account credentials:
+1. Open a browser and go to **+++https://lodsprodmca.sharepoint.com/sites/LAB564-Content-Ignite25+++** using your work account credentials:
 
    **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
@@ -60,7 +60,7 @@ Navigate to the **Knowledge** section and add SharePoint as a knowledge source:
 
 ![The Copilot Studio dialog to add a new knowledge base. The SharePoint knowledge source is highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-01.png)
 
-1. Enter the SharePoint URL of the first document library `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/noandlowcode/` and select **Add**
+1. Enter the SharePoint URL of the first document library `https://lodsprodmca.sharepoint.com/sites/LAB564-Content-Ignite25/noandlowcode/` and select **Add**
 
 ![The Copilot Studio dialog to add a new knowledge base with the URL of library filled in and the "Add" command highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/add-sharepoint-knowledge-02.png)
 
@@ -71,13 +71,13 @@ Navigate to the **Knowledge** section and add SharePoint as a knowledge source:
 
 1. Repeat the previous steps for the Pro-code content using the following settings:
 
-    - **URL**: `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/procode/`
+    - **URL**: `https://lodsprodmca.sharepoint.com/sites/LAB564-Content-Ignite25/procode/`
     - **Name**: rename it with value `Pro-code content`
     - **Description**: change it with value `Comprehensive collection of documents about creating agents with pro-code techniques.`
 
 1. Repeat one last time the previous steps for the Generic content using the following settings:
 
-    - **URL**: `https://lodsprodmca.sharepoint.com/sites/LAB564-Content/generic/`
+    - **URL**: `https://lodsprodmca.sharepoint.com/sites/LAB564-Content-Ignite25/generic/`
     - **Name**: rename it with value `Generic content`
     - **Description**: change it with value `Comprehensive collection of generic documents about Microsoft 365 Copilot extensibility.`
 
