@@ -159,9 +159,9 @@ Ensure that the following settings are configured for optimal performance:
 1. Confirm that the **GPT-5 Chat (preview)** model is selected for the best natural language understanding capabilities
 1. **Save** any changes made to the configuration
 
-This is to ensure that the agent will rely on Generative Orchestration and on GPT-4o when it comes to processing user's prompts.
+This is to ensure that the agent will rely on **Generative Orchestration** and on **GPT-5 Chat (preview)** when it comes to processing user's prompts.
 
-![The Microsoft Copilot Studio settings for the new agent with Generative Orchestrator enabled and GPT-4o model highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-03.png)
+![The Microsoft Copilot Studio settings for the new agent with "Generative Orchestrator" enabled and "GPT-5 Chat (preview)" model highlighted.](https://raw.githubusercontent.com/microsoft/ignite25-LAB564-architect-a-goal-driven-ai-agent-with-copilot-studio/refs/heads/main/img/create-agent-03.png)
 
 Now select the **Settings** command in the upper right corner of the screen and under the **Generative AI** section of settings, in the **Knowledge** group of settings, ensure that the following options are disabled:
 
